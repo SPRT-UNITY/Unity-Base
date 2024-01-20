@@ -24,7 +24,7 @@ public class PlayerInputController : TopDownCharacterController
         // Debug.Log("OnLook" + inputValue.ToString());
         Vector2 newAim = inputValue.Get<Vector2>();
         Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
-        newAim = worldPos - ((Vector2)transform.position).normalized;
+        newAim = (worldPos - ((Vector2)transform.position)).normalized;
 
         if(newAim.magnitude >= .9f) 
         {

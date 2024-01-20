@@ -34,11 +34,15 @@ public class TopDownAimRotation : MonoBehaviour
 
     private void RotateArm(Vector2 rotation) 
     {
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        //float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
-        armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
-        characterRenderer.flipX = armRenderer.flipY;
+        //armRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+        //characterRenderer.flipX = armRenderer.flipY;
 
-        armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
+        armPivot.right = rotation;
+        armRenderer.flipY = Vector2.Dot(Vector2.right, rotation) < 0;
+        characterRenderer.flipX = Vector2.Dot(Vector2.right, rotation) < 0;
+
+        //armPivot.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 }
