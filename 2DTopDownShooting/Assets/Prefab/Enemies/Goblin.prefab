@@ -270,7 +270,7 @@ MonoBehaviour:
     statsChangeType: 2
     maxHealth: 3
     speed: 2
-    attackSO: {fileID: 0}
+    attackSO: {fileID: 11400000, guid: 0e060e78ce7e9fe4fa98f6e107ab0786, type: 2}
   statsModifiers: []
 --- !u!114 &2974417211307120929
 MonoBehaviour:
@@ -287,6 +287,7 @@ MonoBehaviour:
   followRange: 20
   targetTag: Player
   _spriteRenderer: {fileID: 1412184228760161424}
+  _collidingTargetHealthSystem: {fileID: 0}
 --- !u!114 &3930718213426435656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  damageClip: {fileID: 0}
 --- !u!114 &7345125879422178286
 MonoBehaviour:
   m_ObjectHideFlags: 0
